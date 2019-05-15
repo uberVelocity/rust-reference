@@ -1,6 +1,29 @@
 struct Color(i32, i32, i32);
 struct Point(i32, i32, i32);
 
+#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+impl Rectangle {
+    // Associated function that, in this case, is used as a 
+    // constructor. To call it, use ::
+    // let rect = Rectangle::square(3);
+    fn square(size: u32) -> Rectangle {
+        Rectangle { width: size, height: size}
+    }
+
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+
+    fn can_hold(&self, other: &Rectangle) -> bool {
+        self.width > other.width && self.height > other.height
+    }
+}
+
 struct User {
     name: String,
     age: u32,
@@ -52,4 +75,16 @@ fn main() {
 
     print_color(&black);
     print_point(&origin);
+
+    let rect = Rectangle { width: 30, height: 50};
+    let other_rect = Rectangle { width: 10,  height: 10};
+
+    println!("Area of rect = {}", rect.area());
+
+    println!("rect is {:#?}", rect);
+
+    println!("Can rect hold other_rect? {}", rect.can_hold(&other_rect));
+
+    let associated_rect = Rectangle::square(3);
+    println!("associated rectangle = {:?}", associated_rect);
 }
