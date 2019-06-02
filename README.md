@@ -7,3 +7,6 @@
 [ ] - Chapter 4
 #### Chapter 4 - Ownership
 https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html
+
+#### Helpful crash course
+https://www.youtube.com/watch?v=zF34dRivLOw
