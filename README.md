@@ -1,5 +1,7 @@
 # Rust book - Chapter reference and deployment of content
 
+![](ref.png)
+
 ## Chapters:
 - [X] - Introduction
 - [X] - [Chapter 1](https://doc.rust-lang.org/book/ch01-00-getting-started.html)
