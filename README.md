@@ -17,6 +17,7 @@ A collection of Rust projects detailing each Rust concept presented in the book 
 - [ ] - Chapter 11
 - [ ] - Chapter 12
 - [ ] - Chapter 13
+- [ ] - Chapter 14
 .
 .
 .
