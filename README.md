@@ -1,7 +1,7 @@
-# Rust book - Chapter reference and deployment of content
-
+# 7878 book - Chapter reference and deployment of content
 ![](ref.png)
 
+A collection of Rust projects detailing each Rust concept presented in the book ['The Rust Programming Language'](https://doc.rust-lang.org/book/title-page.html). The repository is a work in progress, as I am currently learning this wonder of a language myself.
 ## Chapters:
 - [X] - Introduction
 - [X] - [Chapter 1](https://doc.rust-lang.org/book/ch01-00-getting-started.html)
@@ -21,5 +21,8 @@
 .
 .
 
-#### Helpful crash course
+## Interesting resources
+A useful crash-course on Rust for the very basics of the language:
 https://www.youtube.com/watch?v=zF34dRivLOw
+
+[The Cargo book](https://doc.rust-lang.org/cargo/), an amazing reference towards using Rust's beloved package manager.
