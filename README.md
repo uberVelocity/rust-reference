@@ -23,7 +23,7 @@ A collection of Rust projects detailing each Rust concept presented in the book 
 .
 
 ## C vs RUST mini-projects
-- [Discrete-finite-state-Machine](dfsm/README.md)
+- [Discrete-finite-state-Machine](dfsm)
 
 ## Interesting resources
 A useful crash-course on Rust for the very basics of the language:
