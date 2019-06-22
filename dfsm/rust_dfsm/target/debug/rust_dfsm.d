@@ -1,0 +1,1 @@
+/home/merkel/Documents/Personal/rust/gitrust/rust-book/dfsm/rust_dfsm/target/debug/rust_dfsm: /home/merkel/Documents/Personal/rust/gitrust/rust-book/dfsm/rust_dfsm/src/dfsm.rs /home/merkel/Documents/Personal/rust/gitrust/rust-book/dfsm/rust_dfsm/src/main.rs
