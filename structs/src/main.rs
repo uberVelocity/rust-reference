@@ -55,17 +55,17 @@ fn print_point(point: &Point) {
 
 fn main() {
     let user1 = User {
-        name: String::from("Mihai Popescu"),
+        name: String::from("owl"),
         age: 22,
         male: true,
     };
 
     let user2 = User {
-        name: String::from("Alex Tutea"),
+        name: String::from("mangoose"),
         ..user1
     };
 
-    let user3 = build_user(String::from("Radu Catarambol"), 20, true);
+    let user3 = build_user(String::from("zebra"), 20, true);
 
     print_user_info(&user1);
     print_user_info(&user2);
