@@ -10,7 +10,6 @@ fn main() {
     dfsm.init_f_states();
     dfsm.show_dfsm();
 
-    
     if args.len() > 1 {
         println!("Args 1: {}", args[1]);
         if dfsm.check_symbols(&args[1]) {

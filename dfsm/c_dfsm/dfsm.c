@@ -55,6 +55,7 @@ Dfsm newDfsm(int nStates) {
     if (!nStates) {
         nStates = MAX_STATES;
     }
+
     dfsm.currentState = 0;
     dfsm.nStates = nStates;
     dfsm.states = (int*)malloc(dfsm.nStates * sizeof(int));
