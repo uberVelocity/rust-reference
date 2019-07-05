@@ -1,5 +1,7 @@
 use std::fs::File;
+use std::io::ErrorKind;
 use std::io::Write;
+use sdt::io::Read;
 
 // Two types of errors: Recoverable or Unrecoverable.
 
@@ -43,22 +45,32 @@ pub fn recoverable_err() {
     // So, if it succeeds, it returns a Result instance of Ok(T) with type of T = File
 
     // Attempt to open file `file2.txt`
-    let f = File::open("file1.txt");
+    let f = File::open("file1.txt").unwrap_or_else(|error| {
+        if error.kind() == ErrorKind::NotFound {
+            File::create("file1.txt").unwrap_or_else(|error| {
+                panic!("Problem creating the file: {:?}", error);
+            })
+        }
+        else {
+            panic!("Problem opening the file: {:?}", error);
+        }
+    });
+}
 
-    // Match the value of f and assign that to f
-    let f = match f {
-        Ok(file) => file,     // If f was opened, return the handle to that file
-        Err(error) => match error.kind() {      // If f was not opened, an error was returned -> match the error kind
-            // ErrorKind::NotFound is a specific kind of error. If it ocurred, attempt to create
-            // the file on the disk.
-            ErrorKind::NotFound => match File::create("file2.txt") {
-                Ok(fc) => fc,      // If we successfuly created the file, return it.
-                Err(e) => {        // Else, panic!
-                    panic!("Problem creating the file: {:?}", e),
-                },
-            },
-            // If the open was not possible due to some other error, panic!
-            other_error => panic!("Problem opening the file: {:?}", other_error);
-        },
-    };
+pub fn unwrap_test() {
+    let f = File::open("file1.txt").unwrap();  // If Ok(T) variant is returned, unwrap() returns the value T
+    
+    // expect() is equivalent to unrwap(), but allows
+    // for a message to be passed in for debugging
+    let f = File::open("file1.txt").expect("Unable to open the file!");
+
+    // This envokes the panic! macro with the argument of expect() as an argument to display on screen
+    let f = File::open("file2.txt").expect("Unable to open the file!");
+}
+
+pub fn read_username_from_file() -> Result<String, io::Error> {
+    let mut f = File::open("file1.txt")?;   // `?` will return early out of the whole function and give any Err value to the calling code
+    let mut s = String::new();
+    f.read_to_string(&mut s)?;  // Same logic applies to the `?` on this line
+    Ok(s)
 }
