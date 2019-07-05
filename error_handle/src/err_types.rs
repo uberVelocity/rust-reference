@@ -1,7 +1,9 @@
+use std::fs;
+use std::io;
 use std::fs::File;
 use std::io::ErrorKind;
 use std::io::Write;
-use sdt::io::Read;
+use std::io::Read;
 
 // Two types of errors: Recoverable or Unrecoverable.
 
@@ -69,8 +71,14 @@ pub fn unwrap_test() {
 }
 
 pub fn read_username_from_file() -> Result<String, io::Error> {
-    let mut f = File::open("file1.txt")?;   // `?` will return early out of the whole function and give any Err value to the calling code
     let mut s = String::new();
-    f.read_to_string(&mut s)?;  // Same logic applies to the `?` on this line
+    
+    let mut f = File::open("file1.txt")?.read_to_string(&mut s)?;
+
     Ok(s)
+}
+
+// Same functionality as previous function, but shorter
+pub fn short_read_username_from_file() -> Result<String, io::Error> {
+    fs::read_to_string("file2.txt")
 }
