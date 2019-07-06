@@ -30,3 +30,4 @@ A useful crash-course on Rust for the very basics of the language:
 https://www.youtube.com/watch?v=zF34dRivLOw
 
 [The Cargo book](https://doc.rust-lang.org/cargo/), an amazing reference towards using Rust's beloved package manager.
+[Learning Rust with too many linked lists](https://rust-unofficial.github.io/too-many-lists/). Hilarious introduction of the language with _waaay_ too many linked lists.
