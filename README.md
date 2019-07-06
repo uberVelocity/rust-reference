@@ -12,8 +12,8 @@ A collection of Rust projects detailing each Rust concept presented in the book 
 - [X] - [Chapter 6](https://doc.rust-lang.org/book/ch05-00-structs.html)
 - [X] - [Chapter 7](https://doc.rust-lang.org/book/ch07-00-managing-growing-projects-with-packages-crates-and-modules.html)
 - [X] - [Chapter 8](https://doc.rust-lang.org/book/ch08-00-common-collections.html)
-- [ ] - Chapter 9
-- [ ] - Chapter 10
+- [X] - [Chapter 9](https://doc.rust-lang.org/book/ch09-00-error-handling.html)
+- [X] - [Chapter 10](https://doc.rust-lang.org/book/ch10-00-generics.html)
 - [ ] - Chapter 11
 - [ ] - Chapter 12
 - [ ] - Chapter 13
