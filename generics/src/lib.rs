@@ -5,7 +5,7 @@ pub trait Summary {
 
     // Without {}, no default is initialized.
     fn summarize(&self) -> String {
-        String::from("(Read more from {} ...)", self.summarize_author());
+        String::from("(Read more from ...)", self.summarize_author())
     }
 }
 
