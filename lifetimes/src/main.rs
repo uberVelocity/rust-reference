@@ -1,5 +1,5 @@
 mod lifetime;
 
 fn main() {
-    lifetime::run2();
+    lifetime::lifetime_restriction();
 }
