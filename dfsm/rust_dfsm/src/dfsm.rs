@@ -31,11 +31,8 @@ impl Dfsm {
         let mut found: bool = false;
         for i in 0..dfsm.alphabet.len() {
             if symbol == dfsm.alphabet[i] {
-                found = true;
+                return true;
             }
-        }
-        if found {
-            return true;
         }
         return false;
     }
